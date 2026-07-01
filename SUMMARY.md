@@ -40,6 +40,7 @@
 - [LLVM](docs/technologies/12-llvm.md)
 - [MLIR](docs/technologies/13-mlir.md)
 - [LSP](docs/technologies/14-lsp.md)
+- [UI](docs/technologies/15-ui.md)
 
 # Product
 

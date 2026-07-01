@@ -10,6 +10,8 @@ Studio should provide authored language views, semantic inspectors, graph-orient
 
 The draft is clear about the preferred direction: Kotlin Multiplatform for the shared implementation base, Compose Multiplatform for the UI shell, and WASM for browser delivery and embeddable views. That stack is attractive because it keeps the language and product surfaces aligned while supporting desktop and web deployment from one architecture.
 
+The deeper technology rule is that Studio should remain renderer-agnostic even if one stack is preferred at a given moment. The detailed framework comparison and UI abstraction strategy live in `docs/technologies/15-ui.md`.
+
 ## Boundary
 
 Studio should remain downstream of language, ontology, IR, graph, and compiler contracts. If a workflow only works in Studio and cannot be explained at the semantic or compiler boundary, that is a design failure. Studio exists to make the platform adoptable, not to become a second hidden architecture.

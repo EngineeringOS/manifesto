@@ -23,6 +23,7 @@
 - [AI](docs/architecture/06-ai.md)
 - [Studio](docs/architecture/07-studio.md)
 - [Cloud](docs/architecture/08-cloud.md)
+- [Layout And Geometry](docs/architecture/09-layout-and-geometry.md)
 
 # Technologies
 

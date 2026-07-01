@@ -23,19 +23,21 @@ EngineeringOS is not a replacement campaign against every existing engineering t
 ## Repository Structure
 
 - `docs/` contains the manifesto chapters and foundational architecture narrative.
-- `rfcs/` is the place for durable technical decisions and evolving formal specifications.
-- `prd/` holds product-facing documents that may emerge from the doctrine, not the other way around.
-- `references/` collects standards, ecosystem context, and supporting material.
+- `docs/architecture/` contains the core system design layers.
+- `docs/technologies/` records the third-party platforms, standards references, and reuse boundaries the draft depends on.
+- `docs/prd/` holds product-facing documents that emerge from the doctrine, not the other way around.
+- `docs/rfc/` is the place for durable technical decisions and evolving formal specifications.
+- `docs/references/` collects standards, ecosystem context, and supporting material.
 - `examples/` is reserved for illustrative cases, patterns, and sample artifacts.
 - `assets/` contains diagrams and shared visual material for the written corpus.
 
 ## Recommended Reading Order
 
 1. `README.md`
-2. `docs/00-preface.md`
-3. `docs/01-vision.md`
-4. Additional `docs/` chapters as they are completed
-5. `rfcs/` and `references/` as the architecture becomes more formal
+2. `docs/00-vision.md`
+3. The doctrine and architecture chapters in `docs/`
+4. The leverage and methods layer in `docs/technologies/`
+5. `docs/prd/`, `docs/rfc/`, and `docs/references/` as the architecture becomes more formal
 
 ## Status
 

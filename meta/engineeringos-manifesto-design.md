@@ -275,3 +275,5 @@ The first edition is complete when:
 ## Boundary
 
 This design document defines the repository, structure, migration strategy, and first-edition production path. It does not itself author the final manifesto chapters. Those chapters are the next step.
+
+Implementation planning for the first edition is complete. The next stage is direct chapter production following the approved first-edition sequence and consistency gates.

@@ -16,9 +16,9 @@ Owning these layers does not mean building them as a closed monolith. It means t
 
 ## What EngineeringOS Must Reuse
 
-EngineeringOS should deliberately reuse open-source assets that solve adjacent but already-mature problems. Geometry should come from established kernels such as OCCT rather than custom solid-modeling code. Symbol libraries and electrical compatibility should draw from projects such as QElectroTech. PCB and mechanical interoperability should lean on ecosystems such as KiCad and FreeCAD, while OpenSCAD should be treated primarily as a useful DSL reference rather than as the architectural center.
+EngineeringOS should deliberately reuse open-source assets that solve adjacent but already-mature problems. Geometry should come from established kernels such as OCCT rather than custom solid-modeling code. Symbol libraries and electrical compatibility can draw from projects such as QElectroTech. PCB and mechanical interoperability can lean on ecosystems such as KiCad and FreeCAD, while OpenSCAD is better treated as a useful DSL reference than as the architectural center.
 
-The same discipline applies to infrastructure. Parser frameworks such as ANTLR and Tree-sitter, language tooling such as LSP, embedded databases such as SQLite, analytics engines such as DuckDB, and modern UI foundations are not the place to seek differentiation. They are leverage points. EngineeringOS should combine them in service of the semantic platform instead of turning them into reinvention projects.
+The same discipline applies to infrastructure. Parser frameworks such as ANTLR and Tree-sitter, language tooling such as LSP, embedded databases such as SQLite, analytics engines such as DuckDB, and modern UI foundations are examples of where differentiation is unnecessary. They are leverage points. EngineeringOS should combine them in service of the semantic platform instead of turning them into reinvention projects.
 
 ## Why Forking Is Usually The Wrong Move
 

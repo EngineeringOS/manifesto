@@ -34,10 +34,8 @@ EngineeringOS is not a replacement campaign against every existing engineering t
 1. `README.md`
 2. `docs/00-preface.md`
 3. `docs/01-vision.md`
-4. `docs/03-platform-shift.md`
-5. `docs/04-design-principles.md`
-6. `docs/05-open-source-strategy.md`
-7. `rfcs/` and `references/` as the architecture becomes more formal
+4. Additional `docs/` chapters as they are completed
+5. `rfcs/` and `references/` as the architecture becomes more formal
 
 ## Status
 

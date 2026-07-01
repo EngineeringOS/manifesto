@@ -2,6 +2,8 @@
 
 The architecture of EngineeringOS is built around a semantic core that sits between engineering intent and engineering outputs. Its role is to transform natural language, structured language, and standards-derived knowledge into a canonical representation that can be validated, compiled, extended, and rendered into many downstream targets. This chapter provides the end-to-end system model and names the major layers that all later architecture chapters refine.
 
+That system runs through two distinct but connected paths. The project and design path carries authoring intent through `Engineering Language`, into `Engineering IR`, and through the `Engineering Compiler` to produce validated outputs. The standards and knowledge path carries standards-derived material through the `Knowledge Compiler` into governed knowledge artifacts that the `Engineering Compiler` then consumes during project compilation.
+
 ## End-To-End Pipeline
 
 EngineeringOS begins with a project-compilation path that accepts inputs expressing design intent rather than finished drawings. Those inputs include natural language prompts, authored `Engineering Language`, and imported structured data. The system lowers those project inputs into explicit semantic constructs, aligns them against the `Engineering Ontology`, normalizes them into `Engineering IR`, and then submits that IR to the `Engineering Compiler` for validation, derivation, and target preparation.

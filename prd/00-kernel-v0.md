@@ -49,24 +49,24 @@ It does not include plugin ecosystems, full standards coverage, broad domain pac
 
 ## MVP Pipeline
 
-The MVP pipeline is deliberately linear and inspectable. A small authored DSL is lowered into canonical IR, the IR is evaluated by an explicit rule step, and the resulting state is exported into a downstream artifact. For `v0`, the canonical rule is `Every device must declare a type`, and the canonical export artifact is a JSON serialization of the validated IR. Each stage must be visible enough that a reviewer can understand what changed between stages and why.
+The MVP pipeline is deliberately linear and inspectable. A small authored DSL is lowered into canonical IR, the IR is evaluated by an explicit rule step, and the resulting state is exported into a downstream artifact. For `v0`, the canonical rule is `Every connection endpoint must resolve to an existing device`, and the canonical export artifact is a JSON serialization of the validated IR. Each stage must be visible enough that a reviewer can understand what changed between stages and why.
 
 The DSL stage proves that engineering intent can be written in a constrained author-facing form. The IR stage proves that meaning can be represented canonically. The rule stage proves that execution belongs in explicit compiler logic rather than hidden application state. The export stage proves that outputs can be generated as compiled consequences of the same source model.
 
 ## Deliverables
 
-The first deliverable is a minimal DSL authoring path that can represent a small system with at least one device definition and stable properties. The second is an IR model that preserves identity, type, and properties in a form suitable for rule evaluation and export. The third is a rule step that evaluates the canonical `Every device must declare a type` condition over the IR and emits a deterministic pass or failure result.
+The first deliverable is a minimal DSL authoring path that can represent a small system with at least one device definition and stable properties. The second is an IR model that preserves identity, type, and properties in a form suitable for rule evaluation and export. The third is a rule step that evaluates the canonical `Every connection endpoint must resolve to an existing device` condition over the IR and emits a deterministic pass or failure result.
 
 The final deliverable is a JSON export produced from that same pipeline. The export is intentionally narrow, but it must be concrete enough to show that downstream artifacts can be derived from the compiled model rather than authored separately.
 
 ## Milestones
 
-The first milestone is `DSL -> IR`: authored input lowers into a canonical representation without losing the meaning required for later steps. The second milestone is `IR -> Rule`: explicit rule logic operates over that representation and verifies that every device declares a type. The third milestone is `Rule -> Export`: the pipeline emits the canonical JSON artifact derived from the evaluated model.
+The first milestone is `DSL -> IR`: authored input lowers into a canonical representation without losing the meaning required for later steps. The second milestone is `IR -> Rule`: explicit rule logic operates over that representation and verifies that every connection endpoint resolves to an existing device in the model. The third milestone is `Rule -> Export`: the pipeline emits the canonical JSON artifact derived from the evaluated model.
 
 Completion of these milestones is more important than surface breadth. `Kernel v0` should remain small, readable, and architecturally disciplined even if that means leaving many future concerns unimplemented.
 
 ## Acceptance Criteria
 
-`Kernel v0` is accepted when a reviewer can trace one example end to end through the full pipeline and see that each stage performs a distinct architectural role. The example must begin in the DSL, lower into the IR, pass through the canonical `Every device must declare a type` rule, and produce the canonical JSON export without relying on hidden UI behavior.
+`Kernel v0` is accepted when a reviewer can trace one example end to end through the full pipeline and see that each stage performs a distinct architectural role. The example must begin in the DSL, lower into the IR, pass through the canonical `Every connection endpoint must resolve to an existing device` rule, and produce the canonical JSON export without relying on hidden UI behavior.
 
 The DSL and IR artifacts in this document must remain intact as canonical examples of the kernel boundary. The kernel must demonstrate that compiler execution is real, inspectable, and downstream-oriented, and that the first executable slice stays centered on semantic structure rather than on product breadth.

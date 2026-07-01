@@ -1,6 +1,6 @@
 # Roadmap
 
-The roadmap follows the manifesto architecture in sequence. EngineeringOS starts with the semantic core, then adds executable compilation, then AI-native workflows, then Studio as a projection layer, and only after that opens cloud and enterprise surfaces. This ordering is deliberate because the project's authority must be established in language, ontology, IR, and compiler logic before it is expressed in any richer interface or commercial surface.
+The roadmap follows the manifesto architecture in sequence. EngineeringOS starts with the semantic core, then adds executable compilation, then AI-native workflows, then Studio as a projection layer, and only after that opens cloud and enterprise surfaces. This ordering is deliberate because the project's authority must be established in language, ontology, IR, governed knowledge compilation, and compiler logic before it is expressed in any richer interface or commercial surface.
 
 ## Phase 1: Language, Ontology, IR
 
@@ -10,7 +10,7 @@ Phase 1 is not a GUI phase. It is the period in which the architecture proves th
 
 ## Phase 2: Compiler, Rules, Exporters
 
-Phase 2 turns the semantic core into an executable system. The priority here is the `Engineering Compiler`: explicit passes for lowering, normalization, validation, rule execution, derivation, and target preparation. The point is not to add surface complexity, but to make the semantic core operational and testable.
+Phase 2 turns the semantic core into an executable system. The priority here is the `Engineering Compiler`: explicit passes for lowering, normalization, validation, rule execution, derivation, and target preparation. This phase also establishes the base `Knowledge Compiler` path as part of the architectural model so that governed ontology additions, mappings, and rules have a formal route into project compilation even before AI acceleration becomes a workflow focus. The point is not to add surface complexity, but to make the semantic core operational and testable.
 
 This phase also introduces rule packs and exporters. Reports, structured exports, renderer inputs, and compatibility targets should all be compiled consequences of the same IR rather than separate sources of logic. Exporters belong after the compiler boundary because they depend on validated meaning, not on ad hoc file conversion.
 
@@ -18,7 +18,7 @@ This phase also introduces rule packs and exporters. Reports, structured exports
 
 Phase 3 introduces AI-native workflows only after the semantic and compiler contracts exist. At this stage, natural-language authoring, transformation assistance, review flows, and model-aware automation can operate over stable language and IR interfaces instead of over drawings or prompts alone.
 
-This phase also introduces standards knowledge extraction through the `Knowledge Compiler` path. Standards documents, manufacturer references, and reviewed AI extractions are turned into governed ontology additions, mappings, and rules that can inform project compilation. AI is useful here because it can accelerate extraction and proposal, but the accepted knowledge remains reviewable infrastructure rather than opaque model behavior.
+This phase also introduces AI-native acceleration of standards knowledge extraction through the already-established `Knowledge Compiler` path. Standards documents, manufacturer references, and reviewed AI extractions are turned into governed ontology additions, mappings, and rules that can inform project compilation. AI is useful here because it can accelerate extraction and proposal, but the accepted knowledge remains reviewable infrastructure rather than opaque model behavior.
 
 ## Phase 4: Studio
 

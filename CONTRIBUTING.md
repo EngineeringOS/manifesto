@@ -1,3 +1,3 @@
 # Contributing
 
-Contribution policy will follow the manifesto structure and RFC process defined in this repository.
+Start with `README.md`, then follow the handbook in `docs/` and use future RFCs for change proposals.

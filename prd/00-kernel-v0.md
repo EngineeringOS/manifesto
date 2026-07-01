@@ -37,6 +37,32 @@ data class Node(
 )
 ```
 
+Beyond those preserved baseline artifacts, `Kernel v0` must prove one minimal canonical connected example through the full pipeline:
+
+```kotlin
+system("DemoCabinet") {
+    device("PLC1") {
+        type = "PLC"
+        model = "S7-1200"
+    }
+    device("M1") {
+        type = "Motor"
+    }
+    connect("PLC1", "M1")
+}
+```
+
+Its corresponding minimal IR/reference instance is:
+
+```text
+nodes:
+- Node(id="PLC1", type="PLC", props={"model": "S7-1200"})
+- Node(id="M1", type="Motor", props={})
+
+edges:
+- Edge(from="PLC1", to="M1", type="connects")
+```
+
 Within this scope, the kernel may use a minimal ontology-aligned vocabulary for systems, devices, relationships, and properties, but it should not attempt to encode the full long-term domain model. The goal is a narrow executable slice, not a premature platform expansion.
 
 ## Non-Goals
@@ -55,18 +81,18 @@ The DSL stage proves that engineering intent can be written in a constrained aut
 
 ## Deliverables
 
-The first deliverable is a minimal DSL authoring path that can represent a small system with at least one device definition and stable properties. The second is an IR model that preserves identity, type, and properties in a form suitable for rule evaluation and export. The third is a rule step that evaluates the canonical `Every connection endpoint must resolve to an existing device` condition over the IR and emits a deterministic pass or failure result.
+The first deliverable is a minimal DSL authoring path that can represent the canonical connected example exactly as defined above. The second is an IR model that preserves identity, type, properties, and the single connection needed to lower that example into a node-and-edge representation suitable for rule evaluation and export. The third is a rule step that evaluates the canonical `Every connection endpoint must resolve to an existing device` condition over that IR and emits a deterministic pass or failure result.
 
-The final deliverable is a JSON export produced from that same pipeline. The export is intentionally narrow, but it must be concrete enough to show that downstream artifacts can be derived from the compiled model rather than authored separately.
+The final deliverable is a JSON export produced from that same pipeline for the canonical connected example. The export is intentionally narrow, but it must be concrete enough to show that downstream artifacts can be derived from the compiled model rather than authored separately.
 
 ## Milestones
 
-The first milestone is `DSL -> IR`: authored input lowers into a canonical representation without losing the meaning required for later steps. The second milestone is `IR -> Rule`: explicit rule logic operates over that representation and verifies that every connection endpoint resolves to an existing device in the model. The third milestone is `Rule -> Export`: the pipeline emits the canonical JSON artifact derived from the evaluated model.
+The first milestone is `DSL -> IR`: the canonical connected example lowers into a canonical representation without losing the two device identities or the connection between them. The second milestone is `IR -> Rule`: explicit rule logic operates over that representation and verifies that the `PLC1 -> M1` connection endpoints both resolve to existing devices in the model. The third milestone is `Rule -> Export`: the pipeline emits the canonical JSON artifact derived from that evaluated model.
 
 Completion of these milestones is more important than surface breadth. `Kernel v0` should remain small, readable, and architecturally disciplined even if that means leaving many future concerns unimplemented.
 
 ## Acceptance Criteria
 
-`Kernel v0` is accepted when a reviewer can trace one example end to end through the full pipeline and see that each stage performs a distinct architectural role. The example must begin in the DSL, lower into the IR, pass through the canonical `Every connection endpoint must resolve to an existing device` rule, and produce the canonical JSON export without relying on hidden UI behavior.
+`Kernel v0` is accepted when a reviewer can trace the canonical connected example end to end through the full pipeline and see that each stage performs a distinct architectural role. The example must begin in the DSL, lower into the corresponding node-and-edge IR, pass through the canonical `Every connection endpoint must resolve to an existing device` rule for the `PLC1 -> M1` connection, and produce the canonical JSON export without relying on hidden UI behavior.
 
 The DSL and IR artifacts in this document must remain intact as canonical examples of the kernel boundary. The kernel must demonstrate that compiler execution is real, inspectable, and downstream-oriented, and that the first executable slice stays centered on semantic structure rather than on product breadth.

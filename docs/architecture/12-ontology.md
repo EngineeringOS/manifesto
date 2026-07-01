@@ -30,7 +30,7 @@ This extension model keeps the `Engineering Ontology` both stable and open. The 
 
 `Standards Mapping` is the process by which public engineering standards, manufacturer references, and reviewed domain knowledge are connected to ontology concepts, relationships, and constraints. The purpose is not to copy standards documents clause-for-clause into the model. The purpose is to translate standards-backed meaning into reusable semantic structures that the platform can validate and compile.
 
-This mapping layer is what turns the ontology into a bridge between public knowledge and executable logic. A standard may imply required relationships, cardinality limits, naming expectations, safety separations, or device obligations. Once those implications are mapped into the `Engineering Ontology`, they can inform `Engineering IR`, rule packs, and compiler behavior in a form that is inspectable and testable.
+This mapping layer is what turns the ontology into a bridge between public knowledge and executable logic. The `Knowledge Compiler` prepares these mappings as governed knowledge artifacts that the `Engineering Compiler` consumes during project compilation. A standard may imply required relationships, cardinality limits, naming expectations, safety separations, or device obligations. Once those implications are mapped into the `Engineering Ontology`, they can inform `Engineering IR`, rule packs, and compiler behavior in a form that is inspectable and testable.
 
 ## Governance And Review
 

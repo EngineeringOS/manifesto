@@ -4,13 +4,15 @@ The architecture of EngineeringOS is built around a semantic core that sits betw
 
 ## End-To-End Pipeline
 
-EngineeringOS begins with inputs that express intent rather than finished drawings. Those inputs include natural language prompts, authored `Engineering Language`, imported structured data, and standards-derived knowledge extracted from public documents and reviewed sources. The system lowers those inputs into explicit semantic constructs, aligns them against the `Engineering Ontology`, normalizes them into `Engineering IR`, and then submits that IR to the `Engineering Compiler` for validation, derivation, reporting, and output generation.
+EngineeringOS begins with a project-compilation path that accepts inputs expressing design intent rather than finished drawings. Those inputs include natural language prompts, authored `Engineering Language`, and imported structured data. The system lowers those project inputs into explicit semantic constructs, aligns them against the `Engineering Ontology`, normalizes them into `Engineering IR`, and then submits that IR to the `Engineering Compiler` for validation, derivation, and target preparation.
+
+Alongside that project path, EngineeringOS maintains a separate knowledge-compilation path for standards-derived material. Public standards, manufacturer references, and reviewed extractions are compiled through the `Knowledge Compiler` into governed ontology additions, rules, and `Standards Mapping` artifacts. Those governed knowledge assets inform project compilation, but they are not authoring inputs compiled directly into project IR.
 
 The outbound side of the pipeline is deliberately plural. A single semantic source can produce schematic views, tabular reports, machine-readable exports, enterprise integrations, and domain-specific files through a `Renderer` or other target adapter. This is why EngineeringOS is not a replacement for every downstream tool. It is the layer that makes many outputs possible without making any one output authoritative.
 
 ## Core Layers
 
-The architecture is organized into a small number of layers with distinct responsibilities. The authoring layer accepts natural language and `Engineering Language` as human-facing inputs. The knowledge layer maintains `Engineering Ontology`, rules, and `Standards Mapping` under governed review. The representation layer defines `Engineering IR` as the canonical model of engineering meaning. The execution layer runs the `Engineering Compiler` pass pipeline. The extension layer exposes `Plugin` interfaces for domains, integrations, and targets.
+The architecture is organized into a small number of layers with distinct responsibilities. The authoring layer accepts natural language and `Engineering Language` as human-facing inputs. The knowledge layer maintains `Engineering Ontology`, rules, and `Standards Mapping` through the governed `Knowledge Compiler` path. The representation layer defines `Engineering IR` as the canonical model of project and design semantics. The execution layer runs the `Engineering Compiler` over that IR using governed knowledge as input. The extension layer exposes `Plugin` interfaces for domains, integrations, and targets.
 
 These layers are ordered intentionally. Language is allowed to be expressive, ontology is allowed to be conceptual, and targets are allowed to be heterogeneous because the center is stabilized by the IR and compiler boundary. Later chapters refine each layer separately, but the system only remains coherent if their contracts stay explicit.
 
@@ -22,9 +24,9 @@ This core is what allows EngineeringOS to be compiler-first rather than drawing-
 
 ## Compiler And Pass Model
 
-The `Engineering Compiler` operates on the `Semantic Core` through explicit passes rather than hidden application behavior. Typical passes include lowering, normalization, type and relationship validation, rule evaluation, derivation of numbering and cross-references, report construction, `Standards Mapping`, and preparation for target-specific rendering. Each pass should consume declared inputs, produce declared outputs, and remain inspectable as part of a reproducible pipeline.
+The `Engineering Compiler` operates on the `Semantic Core` through explicit passes rather than hidden application behavior. Typical operational passes include lowering, normalization, type and relationship validation, rule evaluation, derivation of numbering and cross-references, report construction, and preparation for target-specific rendering. Each pass should consume declared inputs, produce declared outputs, and remain inspectable as part of a reproducible pipeline.
 
-EngineeringOS also needs a second compiler-shaped process for knowledge acquisition. The `Knowledge Compiler` is responsible for turning standards documents, manufacturer references, and reviewed AI extractions into governed ontology additions, rules, and mappings that the operational compiler can trust. The two compilers serve different purposes: one compiles engineering projects, and the other compiles engineering knowledge into the platform itself.
+EngineeringOS also needs a second compiler-shaped process for knowledge acquisition. The `Knowledge Compiler` is responsible for turning standards documents, manufacturer references, and reviewed AI extractions into governed ontology additions, rules, and `Standards Mapping` artifacts that the operational compiler can trust. The two compilers serve different purposes: one compiles engineering projects from authoring inputs into `Engineering IR` and downstream outputs, and the other compiles engineering knowledge into governed assets consumed during project compilation.
 
 ## Plugin Boundary
 

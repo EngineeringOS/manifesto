@@ -1,0 +1,15 @@
+# Summary
+
+- [EngineeringOS Manifesto](README.md)
+- [Preface](docs/00-preface.md)
+- [Vision](docs/01-vision.md)
+- [Platform Shift](docs/03-platform-shift.md)
+- [Design Principles](docs/04-design-principles.md)
+- [Open Source Strategy](docs/05-open-source-strategy.md)
+- [Roadmap](docs/09-roadmap.md)
+- [Overall Architecture](docs/architecture/10-overall-architecture.md)
+- [Ontology](docs/architecture/12-ontology.md)
+- [Engineering IR](docs/architecture/13-ir.md)
+- [Compiler](docs/architecture/15-compiler.md)
+- [AI](docs/architecture/17-ai.md)
+- [Kernel v0](prd/00-kernel-v0.md)

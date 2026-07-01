@@ -1,31 +1,47 @@
 # Vision
 
-EngineeringOS begins with a simple claim: the source of truth in engineering should no longer be the drawing file. In the AI era, the durable center of an engineering system should be a semantic model that captures intent, structure, constraints, and knowledge in a form that both humans and machines can reason about. The long-term ambition of EngineeringOS is to become for engineering what LLVM became for compilers: a shared semantic core that supports many tools, many domains, and many workflows without being trapped inside any single vendor application.
+Engineering is about to undergo the biggest architectural shift since CAD replaced paper. The next era of engineering software will not be defined by better drawing tools alone, but by a deeper change in what counts as the source of truth. EngineeringOS exists to define that change clearly enough that others can build on it.
 
-## Mission
+## The One-Sentence Problem
 
-The mission of EngineeringOS is to define and sustain an open semantic foundation for engineering. That foundation consists of language, ontology, intermediate representation, compiler logic, and rule-bearing knowledge that can express engineering intent more faithfully than drawings alone. Its purpose is not to erase existing tools, but to place them downstream of a more durable and interoperable source of truth.
+**Engineering software is still drawing-centric. AI requires semantic engineering.**
 
-## The Source Of Truth Shift
+That sentence is the core of the manifesto. Drawings remain necessary, but they are not a durable foundation for machine reasoning, reusable domain knowledge, trustworthy automation, or cross-tool continuity. If meaning stays trapped inside representation, every downstream capability remains fragile.
 
-For decades, engineering software has treated the file produced by a particular application as the authoritative artifact. That model ties meaning to coordinates, pages, symbols, and vendor-specific structures that are difficult to compare, transform, validate, or reason about across systems. EngineeringOS rejects that assumption.
+## The Core Definition
 
-In the EngineeringOS model, the canonical artifact is semantic. Devices, functions, signals, constraints, behaviors, and relationships are represented explicitly, with generated drawings and exports serving as projections of that model. A schematic remains useful, but it is no longer the deepest representation of the design.
+**EngineeringOS is an open semantic engineering platform that separates engineering intent from engineering representation.**
 
-## EngineeringOS As Open Infrastructure
+It does this by defining `Engineering Language`, `Engineering IR`, ontology, compiler logic, rules, and governed knowledge as the durable center of the system. Drawings, reports, layouts, and enterprise exports remain necessary outputs, but they become compiled views of a deeper model rather than the place where engineering truth is born.
 
-EngineeringOS is intended as infrastructure, not as a single monolithic application. Its role is analogous to a compiler substrate, protocol layer, or shared runtime that many tools can target and extend. Existing systems such as EPLAN, KiCad, QElectroTech, OpenSCAD, FreeCAD, PDF, SVG, MES, and ERP environments are relevant not because they should define the architecture, but because they become targets, integrations, and compatibility surfaces around it.
+## The Era Shift
 
-This open-infrastructure posture matters because engineering spans multiple domains, vendors, and lifecycles. No one editor or file format can credibly serve as the long-term center of that ecosystem. A shared semantic core can.
+The right mental model is not feature evolution. It is era transition.
 
-## Long-Term Goal
+```text
+Paper Era
+        ->
+CAD Era
+        ->
+Semantic Engineering Era
+```
 
-The long-term goal of EngineeringOS is to establish a common semantic layer for engineering that is open, extensible, and durable across generations of tools. In practical terms, that means an ecosystem where authoring languages, rule systems, standards mappings, compilers, and renderers can evolve independently while remaining grounded in a stable architectural center.
+The paper era organized engineering around manual documents. The CAD era organized it around digital representation. The semantic era organizes it around explicit engineering meaning that can be written, compiled, validated, shared, and reasoned over across many tools and many domains.
 
-To describe that ambition as "the LLVM for engineering" is useful only if taken seriously. The comparison implies shared infrastructure, multiple front ends and back ends, explicit intermediate forms, and an ecosystem that outlives any one product strategy. EngineeringOS seeks that level of technical and institutional durability.
+## Open Infrastructure, Not One Product
+
+EngineeringOS is intended as infrastructure, not as a single monolithic application. Its role is closer to a compiler substrate or protocol layer than to a conventional editor. Existing systems such as EPLAN, KiCad, QElectroTech, OpenSCAD, FreeCAD, PDF, SVG, MES, and ERP remain important because they become targets, integrations, and compatibility surfaces around the semantic core.
+
+This matters because no one editor or file format can credibly serve as the permanent center of engineering. A shared semantic layer can. That is why the correct comparison is not "better CAD," but something closer to the role LLVM played for compilers: a durable center that many front ends and back ends can use without owning them all.
+
+## AI Is Enabled By The Platform, Not The Platform Itself
+
+EngineeringOS should not be framed as an AI project whose value rises and falls with current models. It should be framed as the semantic infrastructure that makes trustworthy engineering AI possible. AI is important because it becomes the first major application unlocked by explicit engineering semantics. It is not the deepest architectural layer.
+
+This distinction makes the vision more durable. Models will change. Semantic contracts, compiler boundaries, ontology governance, and traceable engineering logic can outlast those changes.
 
 ## What Success Looks Like
 
-Success for EngineeringOS would mean that engineering intent can be authored, reviewed, transformed, and compiled without being trapped inside one application file. It would mean that the same semantic model can produce multiple synchronized outputs, that standards and rules can operate on explicit meaning rather than inferred geometry, and that new tools can participate through open interfaces instead of private reverse engineering.
+Success means engineering intent can survive independently of any single application file. It means the same semantic model can generate many synchronized outputs. It means standards and rules operate on explicit meaning instead of inferred geometry. It means reusable engineering knowledge can accumulate publicly instead of disappearing inside isolated organizations and proprietary workflows.
 
-It would also mean that the project becomes a reference point rather than a niche implementation: a body of open doctrine and specification that others can adopt, extend, and build upon. If the architecture becomes durable enough that the ecosystem can outlast any single vendor, repository, or founding team, then the vision has been met.
+If that happens, EngineeringOS will matter not only as a repository or a product, but as a movement toward open semantic infrastructure for engineering.

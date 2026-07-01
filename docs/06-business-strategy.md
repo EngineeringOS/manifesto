@@ -1,29 +1,35 @@
 # Business Strategy
 
-EngineeringOS should be structured as open infrastructure with commercial surfaces built above it. The strongest long-term position is not a closed product that hides the semantic layer, but a public architecture whose core contracts become useful to the wider engineering ecosystem while commercial offerings monetize scale, governance, hosting, and operational convenience.
+EngineeringOS should be built as open infrastructure first and commercial surface second. If the semantic layer becomes widely trusted, the project can grow into more than a software product. It can become a movement around shared engineering knowledge and open engineering infrastructure.
 
-## Foundation And Company Split
+## Foundation Before Product Capture
 
-The core semantic assets should live in an open governance layer: language, ontology, IR, compiler contracts, plugin interfaces, standards mappings, and the reference documentation that explains them. This is the part that benefits from broad trust, external contribution, and ecosystem legitimacy.
+The core semantic assets should live in an open governance layer: language, ontology, intermediate representation, compiler contracts, plugin interfaces, standards mappings, and the reference documentation that explains them. This is the part that benefits from trust, public review, ecosystem legitimacy, and long-term durability.
 
-Commercial differentiation should sit above that base. Enterprise cloud services, managed knowledge distribution, organizational policy, collaboration, audit, private plugin registries, and support are all valid commercial layers because they amplify the platform rather than replacing the public core.
+Commercial offerings should sit above that base, not consume it. Hosted collaboration, managed knowledge distribution, organizational policy, audit, support, private registries, and enterprise deployment are valid commercial layers precisely because they amplify the public core instead of replacing it.
 
 ## Why This Model Fits The Architecture
 
-The architecture only works if many tools, integrators, and domains can trust the semantic layer as neutral infrastructure. That trust is easier to build when the core is open and reviewable. At the same time, serious industrial adoption usually needs managed deployment, governance controls, integration services, and support. Those needs create a business surface without forcing the foundational layer closed.
+The architecture only works if many tools, domains, and organizations can trust the semantic layer as neutral infrastructure. That trust is easier to build when the core is open and durable. It is the same structural logic that made open software infrastructure such as Linux, Git, Kubernetes, and LLVM more powerful than isolated products.
 
-This is the same structural logic that made projects such as Linux, Kubernetes, Git, and LLVM more durable than product-specific stacks. The open layer becomes the standardization anchor. The commercial layer funds acceleration, adoption, and operational maturity.
+EngineeringOS should aim for the same role in engineering: not merely a product vendor, but a standardization anchor around which a larger ecosystem can form.
 
 ## Revenue Logic
 
-The most credible revenue lines are enterprise hosting, private knowledge packs, managed standards workflows, premium collaboration features, vertical solution packs, support, integration services, and eventually a marketplace around plugins, rules, and libraries. Charging for the semantic core itself would weaken the chance of broad adoption. Charging for managed industrial capability above it strengthens the business while keeping the architecture coherent.
+The most credible revenue lines are enterprise hosting, private knowledge packs, managed standards workflows, premium collaboration features, vertical solution packs, support, integration services, and eventually a marketplace around plugins, rules, libraries, and reusable engineering logic. Charging for the semantic core itself would weaken the chance of broad adoption. Charging for operational and organizational capability above it strengthens the business while keeping the architecture coherent.
 
 ## Network Effects And Global Benefit
 
-The deeper strategic consequence is that EngineeringOS can create compounding network effects around shared engineering knowledge. If the semantic layer becomes the place where rules, domain packs, standards mappings, and reusable engineering logic are published and maintained, each contribution can improve the usefulness of the whole ecosystem. That is the same kind of compounding public benefit that open software infrastructure created when ecosystems formed around Apache, Linux, package registries, and other shared foundations.
+The deeper strategic consequence is that EngineeringOS can create compounding network effects around shared engineering knowledge. If the semantic layer becomes the place where rules, domain packs, standards mappings, and reusable engineering logic are published and maintained, each contribution can improve the usefulness of the whole ecosystem.
 
-This matters commercially as well as philosophically. A platform that helps the world accumulate engineering knowledge becomes harder to displace than a product that merely sells a better editor. The long-term asset is not only the software surface. It is the growing body of interoperable engineering logic that the platform makes publishable, reusable, and economically valuable across the entire industry.
+That is the same kind of public compounding effect open software infrastructure created when shared layers formed around Apache, Linux, and package ecosystems. The long-term asset is not only the software surface. It is the growing body of interoperable engineering knowledge that the platform makes publishable, reusable, and economically valuable across the entire industry.
+
+## Why This Can Become A Movement
+
+Projects become movements when they name a fundamental shift clearly enough that other people want to build inside it. EngineeringOS has that potential because it is not merely proposing another tool. It is proposing a new center of gravity for engineering software.
+
+If the project succeeds, people will not participate only because they like one UI or one compiler implementation. They will participate because they believe engineering knowledge should become open, semantic, traceable, and reusable at global scale.
 
 ## Strategic Constraint
 
-Business strategy should never force the project to compromise its semantic center. EngineeringOS cannot become a thin enterprise wrapper over legacy tools, and it cannot reduce the open layer until the standard disappears. The business exists to accelerate the platform, not to hollow it out.
+Business strategy must never force the project to compromise its semantic center. EngineeringOS cannot become a thin enterprise wrapper over legacy tools, and it cannot hollow out the public layer until the standard disappears. The business exists to accelerate the infrastructure, not to consume it.

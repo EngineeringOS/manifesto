@@ -123,3 +123,4 @@ That is why EngineeringOS has the potential to become more than a product. It ca
 1. [Deepwiki](https://deepwiki.com/EngineeringOS/manifesto)
 2. [GitHub Page](https://engineeringos.github.io/manifesto)
 3. [Github](https://github.com/EngineeringOS/manifesto)
+4. [Athena POC](https://github.com/EngineeringOS/Athena)
